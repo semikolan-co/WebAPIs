@@ -13,3 +13,15 @@ navigator.getBattery().then((battery) => {
   console.log(battery);
 });
 ```
+### BatteryManager Object Properties
+
+BatteryManager has the following properties:
+- `charging`: `boolean` - Whether the battery is currently being charged.
+- `chargingTime`: `number` - The amount of time, in seconds, that will be required to fully charge the battery.
+- `dischargingTime`: `number` - The amount of time, in seconds, that the battery is expected to last when not being charged.
+- `level`: `number` - A number between 0 and 1 that represents the current battery level.
+
+
+
+
+
