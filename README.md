@@ -5,3 +5,12 @@ When writing code for the Web, there are a large number of Web APIs available. T
 Web APIs in this repository are:
 - [Battery Status API](/Battery)
 
+
+
+## Join Us
+
+Be a part of the SemiKolan Developer's Community by joining our [Discord Server](https://discord.semikolan.co). Here you can discuss about the project or ask any other queries and there will be a lot of folks to help
+
+[![](https://img.shields.io/discord/849036512045039637?color=5865F2&logo=Discord&style=flat-square)](https://discord.semikolan.co)
+
+
