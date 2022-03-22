@@ -21,6 +21,25 @@ BatteryManager has the following properties:
 - `dischargingTime`: `number` - The amount of time, in seconds, that the battery is expected to last when not being charged.
 - `level`: `number` - A number between 0 and 1 that represents the current battery level.
 
+Example: Using BatteryManager Properties
+
+```js
+navigator.getBattery().then((battery) => {
+
+    // Taking Properties in Variables
+    const isCharging = battery.charging;
+    const level = battery.level;
+    const chargingTime = battery.chargingTime;
+    const dischargingTime = battery.dischargingTime;
+    
+    // Displaying them in console
+    console.log("isCharging: " + isCharging);
+    console.log("level: " + level);
+    console.log("chargingTime: " + chargingTime);
+    console.log("dischargingTime: " + dischargingTime);
+
+});
+
 
 
 
