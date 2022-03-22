@@ -16,10 +16,12 @@ const updateBattery = (batt) => {
 
 const updateChargingStatus = (isCharging, chargingTime, dischargingTime) => {
   if (isCharging) {
+    level.classList.add("charge");
     message.textContent = "Charging";
     message.textContent +=
       " - will take " + chargingTime + " Seconds to charge Completely";
   } else {
+    level.classList.remove("charge");
     message.textContent = "Discharging";
     message.textContent +=
       " - will take " + dischargingTime + " Seconds to discharge Completely";
@@ -45,15 +47,35 @@ navigator.getBattery().then((battery) => {
   updateBattery(level * 100);
   updateChargingStatus(isCharging, chargingTime, dischargingTime);
 
-  if (battery.dischargingTime == Infinity) level.classList.add("power");
+  // if (battery.dischargingTime == Infinity) level.classList.add("power");
 
-  if (battery.charging) level.classList.toggle("charge");
+  // BatteryManager has 4 Events also
+  // 1. chargingchange - Event fired when the charging status of the battery changes
+  // 2. chargingtimechange - Event fired when the charging time of the battery changes
+  // 3. dischargingtimechange - Event fired when the discharging time of the battery changes
+  // 4. levelchange - Event fired when the battery level changes
 
-  battery.addEventListener("levelchange", function () {
-    updateBattery(this.level * 100);
+  // Event Listener for chargingchange
+  battery.addEventListener("chargingchange", (b) => {
+    b = b.target;
+    updateChargingStatus(b.charging, b.chargingTime, b.dischargingTime);
   });
 
-  battery.addEventListener("chargingchange", function () {
-    level.classList.toggle("charge");
+  // Event Listener for levelchange
+  battery.addEventListener("levelchange", (b) => {
+    b = b.target;
+    updateBattery(b.level * 100);
+  });
+
+  // Event Listener for chargingtimechange
+  battery.addEventListener("chargingtimechange", (b) => {
+    b = b.target;
+    updateChargingStatus(b.charging, b.chargingTime, b.dischargingTime);
+  });
+
+  // Event Listener for dischargingtimechange
+  battery.addEventListener("dischargingtimechange", (b) => {
+    b = b.target;
+    updateChargingStatus(b.charging, b.chargingTime, b.dischargingTime);
   });
 });
