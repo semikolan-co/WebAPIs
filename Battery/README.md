@@ -13,7 +13,7 @@ navigator.getBattery().then((battery) => {
   console.log(battery);
 });
 ```
-
+<hr />
 
 ### BatteryManager Object Properties
 
@@ -42,7 +42,7 @@ navigator.getBattery().then((battery) => {
 
 });
 ```
-
+<hr />
 
 ### BatteryManager Events
 
@@ -52,9 +52,29 @@ BatteryManager has the following events:
 - `dischargingtimechange` - Fired when the discharging time changes.
 - `levelchange` - Fired when the battery level changes.
 
+Example: Using BatteryManager Events
 
+```js
+navigator.getBattery().then((battery) => {
 
+    // chargingchange event
+    battery.addEventListener('chargingchange', (event) => {
+        console.log("chargingchange: " + event.target.charging);
+    });
 
+    // chargingtimechange event
+    battery.addEventListener('chargingtimechange', (event) => {
+        console.log("chargingtimechange: " + event.target.chargingTime);
+    });
 
+    // dischargingtimechange event
+    battery.addEventListener('dischargingtimechange', (event) => {
+        console.log("dischargingtimechange: " + event.target.dischargingTime);
+    });
+    
+    // levelchange event
+    battery.addEventListener('levelchange', (event) => {
+        console.log("levelchange: " + event.target.level);
+    });
 
-
+});
