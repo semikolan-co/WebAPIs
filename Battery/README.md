@@ -13,6 +13,8 @@ navigator.getBattery().then((battery) => {
   console.log(battery);
 });
 ```
+
+
 ### BatteryManager Object Properties
 
 BatteryManager has the following properties:
@@ -39,6 +41,18 @@ navigator.getBattery().then((battery) => {
     console.log("dischargingTime: " + dischargingTime);
 
 });
+```
+
+
+### BatteryManager Events
+
+BatteryManager has the following events:
+- `chargingchange` - Fired when the charging state changes.
+- `chargingtimechange` - Fired when the charging time changes.
+- `dischargingtimechange` - Fired when the discharging time changes.
+- `levelchange` - Fired when the battery level changes.
+
+
 
 
 
