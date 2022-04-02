@@ -15,3 +15,15 @@ navigator.clipboard.readText().then((text) => {
 ```
 
 <hr />
+
+### Writing to clipboard
+
+You can write to the clipboard using the `writeText` method.
+Here is an example:
+
+```js
+const textYouWantToCopy = "Hello World";
+navigator.clipboard.writeText(textYouWantToCopy).then(() => {
+  console.log("Text copied to clipboard");
+});
+```
