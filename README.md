@@ -4,6 +4,7 @@ When writing code for the Web, there are a large number of Web APIs available. T
 
 Web APIs in this repository are:
 - [Battery Status API](/Battery)
+- [ClipBoard API](/Clipboard)
 
 
 
