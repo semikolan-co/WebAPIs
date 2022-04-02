@@ -22,7 +22,7 @@ pasteButton.addEventListener("click", () => {
     .readText()
     .then((text) => {
       pasteTextArea.value += text;
-      showToast(`"${text}" was pasted from your clipboard.`);
+      showToast(`"Successfully pasted from your clipboard.`);
     })
     .catch((err) => {
       console.error(`Error pasting clipboard's content: ${err}`);

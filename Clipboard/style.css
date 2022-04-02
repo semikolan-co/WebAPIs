@@ -48,6 +48,9 @@ textarea{
   resize: none;
   outline:none;
 }
+textarea::placeholder{
+  color:var(--LightSlate);
+}
 .clip-body button{
   padding:7px 15px;
   background: var(--Green);
