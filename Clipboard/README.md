@@ -27,3 +27,29 @@ navigator.clipboard.writeText(textYouWantToCopy).then(() => {
   console.log("Text copied to clipboard");
 });
 ```
+
+<hr />
+
+### Asynchronous Clipboard Events
+
+You can listen to clipboard events using the `addEventListener` method.
+Here is an example:
+
+```js
+// Listen for clipboard changes
+
+// When user copies something to clipboard
+document.addEventListener("copy", (event) => {
+  console.log("Text copied to clipboard");
+});
+
+// When user cuts something to clipboard
+document.addEventListener("cut", (event) => {
+  console.log("Text cut to clipboard");
+});
+
+// When user pastes something to clipboard
+document.addEventListener("paste", (event) => {
+  console.log("Text pasted to clipboard");
+});
+```
