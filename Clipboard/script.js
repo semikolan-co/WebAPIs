@@ -9,6 +9,7 @@ copyButton.addEventListener("click", () => {
   navigator.clipboard
     .writeText(text)
     .then(() => {
+      showToast("Copied to clipboard!");
       console.log(`"${text}" was copied to your clipboard.`);
     })
     .catch((err) => {
@@ -21,6 +22,7 @@ pasteButton.addEventListener("click", () => {
     .readText()
     .then((text) => {
       pasteTextArea.value += text;
+      showToast(`"${text}" was pasted from your clipboard.`);
     })
     .catch((err) => {
       console.error(`Error pasting clipboard's content: ${err}`);
@@ -45,8 +47,8 @@ document.addEventListener("cut", (event) => {
 const showToast = (text) => {
   Toastify({
     text: text,
-    gravity: "bottom", // `top` or `bottom`
-    position: "center", // `left`, `center` or `right`
+    gravity: "bottom",
+    position: "center",
     style: {
       background: "linear-gradient(to right, var(--LightSlate), var(--LightestSlate))",
       color: "var(--Navy)",
