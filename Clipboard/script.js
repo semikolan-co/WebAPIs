@@ -28,3 +28,16 @@ pasteButton.addEventListener('click', () => {
 clearButton.addEventListener('click', () => {
   pasteTextArea.value = ''
 })
+
+
+
+document.addEventListener("copy", (event) => {
+  console.log("Text copied to clipboard");
+});
+document.addEventListener("paste", (event) => {
+  console.log("Text pasted from clipboard");
+}
+);
+document.addEventListener("cut", (event) => {
+  console.log("Text cut from clipboard");
+});
