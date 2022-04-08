@@ -6,6 +6,7 @@ Web APIs in this repository are:
 - [Battery Status API](Battery)
 - [ClipBoard API](Clipboard)
 - [Eye Dropper API](Eyedropper)
+- [Geolocation API](Geolocation)
 
 
 
