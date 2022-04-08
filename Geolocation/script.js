@@ -29,7 +29,7 @@ function geolocate() {
     console.log(position)
   }
   const error = () => {
-    statuss.innerHTML = 'Unable to retrieve your location.'
+    trigger.innerHTML = 'Allow App to access your location'
   }
   if (navigator.geolocation) {
     statuss.innerHTML = 'Locating...'
