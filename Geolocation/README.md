@@ -6,14 +6,14 @@ The Geolocation API allows the user to provide their location to web application
 
 The Geolocation API can be accessed using the `navigator.geolocation` object. The following methods are available:
 
-    * `getCurrentPosition` - Returns the current position of the user.
-    * `watchPosition` - Returns the current position of the user and fires an event every time the position changes.
+ - `getCurrentPosition` - Returns the current position of the user.
+ - `watchPosition` - Returns the current position of the user and fires an event every time the position changes.
 
 ### getCurrentPosition
 
-    * `getCurrentPosition(successCallback, errorCallback)` - Returns the current position of the user.
-    * `successCallback` - A callback function that is called when the position is successfully retrieved.
-    * `errorCallback` - A callback function that is called when there is an error.
+ - `getCurrentPosition(successCallback, errorCallback)` - Returns the current position of the user.
+ - `successCallback` - A callback function that is called when the position is successfully retrieved.
+ - `errorCallback` - A callback function that is called when there is an error.
 
 Here is an example:
 
